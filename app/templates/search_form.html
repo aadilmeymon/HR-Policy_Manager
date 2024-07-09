@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HR Policy Manager - Search</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Policy Chunks</h1>
+        <form action="{{ url_for('main.search') }}" method="post">
+            <input type="text" name="search_query" placeholder="Enter search query">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</body>
+</html>

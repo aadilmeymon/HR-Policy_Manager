@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HR Policy Manager</title>
+</head>
+<body>
+<div class="container">
+    <h1>HR Policy Manager</h1>
+
+    <!-- Upload Form -->
+    <h2>Upload Policy Document</h2>
+    <form action="{{ url_for('main.upload_file') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <!-- Search Form -->
+    <h2>Search Policy Documents</h2>
+    <form action="{{ url_for('main.search') }}" method="post">
+        <input type="text" name="search_query" placeholder="Enter search query">
+        <input type="submit" value="Search">
+    </form>
+
+    <!-- Delete Form (example link) -->
+    <h2>Delete Policy Document Chunk</h2>
+    <form action="{{ url_for('main.delete_chunk', chunk_id='chunk_id_here') }}" method="post">
+        <button type="submit">Delete Chunk</button>
+    </form>
+
+    <!-- Update Form (example link) -->
+    <h2>Update Policy Document Chunk</h2>
+    <form action="{{ url_for('main.update_chunk', chunk_id='chunk_id_here') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Update Chunk">
+    </form>
+
+</div>
+</body>
+</html>
